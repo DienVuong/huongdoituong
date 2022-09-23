@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Temperature(c){
+        this.c = c;
+        this.getDoF =function(){
+            return 9/5*c + 32
+        }
+        this.getDoK =function(){
+            return c + 273.15
+        }
+        if( c< -273){
+           return c = "khong xac dinh"
+        }
+    }
+    let temperature = new Temperature(25);
+    let f = temperature.getDoF();
+    let k = temperature.getDoK();
+    document.write("Nhiet do F :"+ f + "<br>" +"Nhiet do K : "+ k);
+</script>
+</html>
